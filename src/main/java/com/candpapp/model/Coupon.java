@@ -35,8 +35,8 @@ public class Coupon {
 	}
 	 
 	@Override
-	public String toString() {
-		return "Coupon [id=" + id + ", code=" + code + ", discount=" + discount + ", expDate=" + expDate + "]";
+	public String toString() { 
+		return "<h2>Coupon Data </h2>Coupon id: " + id + "<br/>code: " + code + "<br/> discount: " + discount + "<br/>  expDate: " + expDate + "";
 	}
 	
 

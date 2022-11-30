@@ -31,7 +31,7 @@ public class CouponController extends HttpServlet {
 		if(action.equals("create")) {
 			createCoupon(request, response);
 		}else if(action.equals("find")) {
-			
+			findCoupon(request, response);
 		}
 		
 	}
@@ -50,7 +50,18 @@ public class CouponController extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.print("<b>Product Created.</b>");
+		out.print("<b>Coupon Created.</b>");
+		out.print("<br/><a href='/candpapp'>Home</a>");
+	}
+	
+	public void findCoupon(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String couponCode = request.getParameter("couponCode");
+		Coupon coupon = dao.findByCode(couponCode);
+		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.print("<b>Coupon Details:</b>");
+		out.print(coupon);
 		out.print("<br/><a href='/candpapp'>Home</a>");
 	}
 

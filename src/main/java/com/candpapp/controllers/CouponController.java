@@ -27,6 +27,16 @@ public class CouponController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		String action = request.getParameter("action");
+		if(action.equals("create")) {
+			createCoupon(request, response);
+		}else if(action.equals("find")) {
+			
+		}
+		
+	}
+	
+	private void createCoupon(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String couponCode = request.getParameter("couponCode");
 		String discount = request.getParameter("discount");
 		String expiryDate = request.getParameter("expiry Date");

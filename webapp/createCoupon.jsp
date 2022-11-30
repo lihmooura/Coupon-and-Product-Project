@@ -13,8 +13,9 @@
 Coupon Code: <input type="text" name="CouponCode" />
 Discount: <input type="text" name="Discount" />
 Expiry Date: <input type="text" name="expiryDate" />
+<input type="hidden" name="action" value="create" />
 <input type="submit" value="Save" />
- </pre>
+	   </pre>
 	</form>
 </body>
 </html>

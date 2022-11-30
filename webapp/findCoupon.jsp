@@ -12,7 +12,8 @@
 		<pre>
 Coupon Code: <input type="text" name="couponCode" />
 <input type="submit" value="find" />
- </pre>
+<input type="hidden" name="action" value="find" />
+ 		</pre>
 	</form>
 </body>
 </html>

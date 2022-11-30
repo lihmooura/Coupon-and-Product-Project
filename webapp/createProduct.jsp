@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Create Product</h1>
-	<form action="">
+	<form action="products" method="post">
 		<pre>
 Name: <input type="text" name="name" />
 Description: <input type="text" name="description" />
